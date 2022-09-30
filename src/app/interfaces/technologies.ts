@@ -1,0 +1,84 @@
+interface Technologies {
+  image:string,
+  name:string,
+  stars:number
+}
+
+export const  technologies: Technologies[] = [
+  {
+    image:'css.png',
+    name:'CSS',
+    stars:4
+  },
+  {
+    image:'html.png',
+    name:'HTML',
+    stars:4
+  },
+  {
+    image:'js.png',
+    name:'JavaScript',
+    stars:4
+  },
+  {
+    image:'typescript.png',
+    name:'TypeScript',
+    stars:4
+  },
+  {
+    image:'nvim.jpg',
+    name:'Nvim',
+    stars:4
+  },
+  {
+    image:'git.png',
+    name:'Git',
+    stars:4
+  },
+  {
+    image:'angular.png',
+    name:'Angular',
+    stars:4
+  },
+  {
+    image:'node.jpg',
+    name:'Node Express',
+    stars:4
+  },
+  {
+    image:'react.png',
+    name:'React',
+    stars:2
+  },
+  {
+    image:'linux.jpg',
+    name:'Linux(debian-arch)',
+    stars:4
+  },
+  {
+    image:'postgre.png',
+    name:'PostgreSQL',
+    stars:4
+  },
+  {
+    image:'mysql.png',
+    name:'MySQL',
+    stars:4
+  },
+  {
+    image:'mongo.png',
+    name:'MongoDB',
+    stars:3
+  },
+  {
+    image:'sequelize.png',
+    name:'Sequelize',
+    stars:4
+  },
+  {
+    image:'mongoose.png',
+    name:'Mongoose',
+    stars:4
+  },
+
+]
