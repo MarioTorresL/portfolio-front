@@ -39,3 +39,15 @@
 	color:#C4A384;
 	font-weight:bold;
 }
+
+@media only screen and (max-width: 600px) {
+	.tec{
+	flex:2 0 50%;
+	}
+} 
+
+@media screen and (max-width: 992px) {
+  .tec {
+		flex: 4 0 30%;
+  }
+}
