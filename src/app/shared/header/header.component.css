@@ -2,3 +2,7 @@
 	background-color:#112530;
 	color: white;
 }
+.nav-link{
+	display: grid;
+	text-align: center; 
+}

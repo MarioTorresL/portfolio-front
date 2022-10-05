@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import {PagesComponent} from './pages.component';
 import {HomeComponent} from './home/home.component';
+import {CommentsComponent} from './comments/comments.component';
 
 const routes: Routes =[
   {
-    path: 'home', component: PagesComponent,
+    path: '', component: PagesComponent,
     children:[
-      {path:'', component: HomeComponent}
+      {path:'', component: HomeComponent},
+      {path:'comments', component: CommentsComponent}
     ]
-  }
+  },
 ]
 
 

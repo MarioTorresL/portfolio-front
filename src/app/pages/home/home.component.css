@@ -15,6 +15,11 @@ background-color: #2F4F5A;
 	color:#B56F3B;
 	font-weight:bold;
 }
+.subtitulos{
+	color:#2F4F5A;
+	font-weight:bold;
+	text-align:center;
+}
 .dflex{
  display: flex;
  flex-wrap:wrap;

@@ -3,3 +3,6 @@ body{
 	width: auto;
 	height: auto
 }
+.cursor{
+	cursor:pointer;
+}

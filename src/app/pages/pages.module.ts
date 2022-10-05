@@ -4,13 +4,15 @@ import { PagesComponent } from './pages.component';
 import {SharedModule} from '../shared/shared.module';
 import {RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
+import {CommentsComponent} from './comments/comments.component';
 
 
 
 @NgModule({
   declarations: [
     PagesComponent,
-    HomeComponent
+    HomeComponent,
+    CommentsComponent
   ],
   exports: [
     PagesComponent
