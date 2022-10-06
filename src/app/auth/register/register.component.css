@@ -1,0 +1,21 @@
+
+.main{
+  display:flex;
+  height: 100vh;
+	background-image:url('../../../assets/back.jpg');
+  align-items:center;
+  justify-content:center;
+}
+
+.content-part{
+  flex-grow:5;
+}
+
+.card{
+  background-color:#2F4F5A;
+  color:#ECE9E4;
+  font-weight: bold;
+}
+.check{
+  display:flex;
+}

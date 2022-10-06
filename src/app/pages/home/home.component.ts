@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { technologies } from '../../interfaces/technologies'
+import { technologies } from '../../interfaces/technologies.interface'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
