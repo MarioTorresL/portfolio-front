@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import {AuthComponent} from './auth.component';
 import {RouterModule} from '@angular/router';
 import {SharedModule} from '../shared/shared.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -15,9 +17,12 @@ import {SharedModule} from '../shared/shared.module';
     AuthComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ]
 })
 export class AuthModule { }

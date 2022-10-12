@@ -12,29 +12,50 @@
       </div>
 
       <div class="card-body">
-        <form class="form">
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
 
-          <div class="form-group mt-4">
-            <div class="mt-1 mb-5">
+          <div class="form-group mt-2">
+            <div class="mb-5">
               <h4>Email</h4>
-              <input class="form-control" type="email"
-                                          placeholder="Email">
+              <input 
+                class="form-control" 
+                type="email"
+                placeholder="Email"
+                formControlName="email"
+              >
             </div>
             <div class="mt-5 mb-5">
               <h4>Password</h4>
-              <input class="form-control" type="password"
-                                          placeholder="Password">
+              <input 
+                class="form-control" 
+                type="password"
+                placeholder="Password"
+                formControlName="encryptedPassword"
+                >
             </div>
 
             <div class="form-check check">
-              <input class="form-check-input me-1" type="checkbox" value="" id="remember-login">
+              <input 
+                class="form-check-input mt-1" 
+                type="checkbox" 
+                value="" 
+                id="remember-login"
+                formControlName="remember"
+                >
               <label class="form-check-label" for="flexCheckChecked">Remember me</label>
             </div>
 
           </div>
 
+          <button type="submit" class="btn btn-warning">Login</button>
         </form>
       </div>
+
+      <div>
+        Don't have an account?
+        <a routerLink="/register" class="text-primary"><b>Sign Up</b></a>
+      </div>
+
     </div>
 
   </div>
