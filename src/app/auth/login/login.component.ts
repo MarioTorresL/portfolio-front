@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   public loginForm = this.fb.group({
     email:[localStorage.getItem('email') || '', [Validators.required, Validators.email]],
     encryptedPassword: ['', [Validators.required]],
-    remember:false
+    remember:localStorage.getItem('remember') || false
   })
 
   constructor( private fb: FormBuilder, private authService: AuthService, private router: Router ) { }
@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-
     this.authService.login(this.loginForm.value).subscribe(resp=>{
 
       if(this.loginForm.get('remember')?.value){

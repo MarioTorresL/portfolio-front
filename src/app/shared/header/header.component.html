@@ -10,10 +10,15 @@
         </li>
       </ul>
     </div>
-    <div class="text-end me-5" >
-          <button type="button" class="btn btn-outline-light me-2" routerLink="login">Login</button>
-          <button type="button" class="btn btn-warning" routerLink="register">Sign-up</button>
-          <p>{{token}}</p>
+    <div class="me-2" *ngIf="email">
+      <h6>{{email}}</h6>
+    </div>
+    <div class="text-end me-5" *ngIf="!token">
+      <button type="button" class="btn btn-outline-light me-2" routerLink="login">Login</button>
+      <button type="button" class="btn btn-warning" routerLink="register">Sign-up</button>
+    </div>
+    <div class="text-end me-5" *ngIf="token">
+      <button type="button" class="btn btn-warning" (click)="logout()">Logout</button>
     </div>
   </nav>
 </header>
