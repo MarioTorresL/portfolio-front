@@ -1,9 +1,14 @@
-
+.upFlex{
+	display:flex;
+ flex-wrap:wrap;
+}
 .left-divisor{
+	flex:4 0 50%;
 background-color: #2F4F5A;
 	color:#ECE9E4;
 }
 .right-divisor{
+	flex:4 0 50%;
 	background-color:#ECE9E4;
 	color:#2F4F5A;
 }
@@ -54,5 +59,11 @@ background-color: #2F4F5A;
 @media only screen and (max-width: 600px) {
 	.tec{
 	flex:2 0 50%;
+	}
+	.left-divisor{
+	flex:2 0 100%;
+	}
+	.right-divisor{
+	flex:2 0 100%;
 	}
 } 
