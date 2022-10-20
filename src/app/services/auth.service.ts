@@ -16,11 +16,11 @@ export class AuthService {
   constructor( private http: HttpClient, private router: Router ) { }
 
   get token():string{
-    return localStorage.getItem('token') || ''
+    return localStorage.getItem('token') || '';
   }
 
   get email():string{
-    return this.user?.email || '';
+    return localStorage.getItem('user') || '';
   }
 
   get headers(){
@@ -36,6 +36,7 @@ export class AuthService {
     return this.http.post(`${API}/auth/login`, formLogin).pipe(
       tap((resp:any)=>{
         localStorage.setItem('token', resp.accessToken)
+        localStorage.setItem('user', formLogin.email)
         this.user = formLogin
         if(formLogin.remember){
           localStorage.setItem('remember', 'true')
@@ -46,6 +47,7 @@ export class AuthService {
 
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
    return this.router.navigateByUrl('')
   }
 

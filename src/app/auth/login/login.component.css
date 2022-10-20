@@ -9,6 +9,9 @@
 .content-part{
   flex-grow:3;
 }
+.titleee{
+	color:#FFC107;
+}
 
 .card{
   background-color:#2F4F5A;

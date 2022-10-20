@@ -21,10 +21,8 @@ export class HeaderComponent implements OnInit {
   }
 
   login(){
-    this.authService.validateToken().subscribe(resp=>{
-      this.token = resp
-      this.email = this.authService.email
-    })
+    this.token = this.authService.token
+    this.email = this.authService.email
   }
 
   logout(){
