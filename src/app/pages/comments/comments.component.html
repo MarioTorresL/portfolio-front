@@ -1,4 +1,5 @@
 <div class="fluid">
+
 	<div class="up" *ngIf="user">
 		<div class="card cardUp">
 			<div class=" card-header text-center">
@@ -15,15 +16,15 @@
 
 	<div class="dflex">
 		<div *ngFor="let data of comments" class="card comment m-4 animate__animated animate__fadeInTopLeft">
-			<div class="title card-header">
-				<h4> {{data.User?.userName}} </h4>
-				<h6 class="text-muted">{{data.User?.email}}</h6>
+			<div class="title card-header" style="display:flex; align-items:center;">
+				<h4 style="flex-grow:4;"> {{data.User?.userName}} </h4>
+				<h6 style="flex-grow:1;" class="text-muted text-end">{{data.User?.email}}</h6>
 			</div>
 			<div class="card-body">
 				<p class="card-text textdata">{{data.comment}}</p>
+				<h6 class="text-end text-muted">{{data.createdAt}}</h6>
 			</div>
 		</div>
-
 	</div>
 
 </div>
