@@ -19,8 +19,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "./node_modules/custom-project/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.css"
