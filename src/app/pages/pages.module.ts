@@ -5,6 +5,7 @@ import {SharedModule} from '../shared/shared.module';
 import {RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {CommentsComponent} from './comments/comments.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -18,6 +19,8 @@ import {CommentsComponent} from './comments/comments.component';
     PagesComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     RouterModule,
     CommonModule,

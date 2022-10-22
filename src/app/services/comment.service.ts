@@ -11,7 +11,24 @@ export class CommentService {
 
   constructor( private http: HttpClient ) { }
 
+  get token():string{
+    return localStorage.getItem('token') || '';
+  }
+
+  get headers(){
+    return {
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.token}` 
+      }
+    }
+  }
+
   get(){
     return this.http.get<any>(`${this.API}/comments`)
+  }
+
+  post(formComment:any){
+    return this.http.post(`${this.API}/comments`, formComment, this.headers )
   }
 }
