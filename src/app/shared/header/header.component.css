@@ -3,6 +3,8 @@
 	color: white;
 }
 .nav-link{
-	display: grid;
-	text-align: center; 
+	color:#ECE9E4;
+}
+.navbar-nav{
+	display: contents;
 }
