@@ -19,7 +19,7 @@ import {PagesModule} from './pages/pages.module';
     PagesModule,
     AuthModule
   ],
-  providers: [ {provide: APP_BASE_HREF, useValue: '/portfolio-front/'}],
+  providers: [ {provide: APP_BASE_HREF, useValue: '/portfolio-front'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
