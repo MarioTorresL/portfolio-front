@@ -2,9 +2,10 @@
 	background-color:#112530;
 	color: white;
 }
-.nav-link{
-	color:#ECE9E4;
+.icon-white{
+	color:white;
 }
-.navbar-nav{
-	display: contents;
+.d-flex{
+	align-items:center;
+	justify-content:center;
 }
