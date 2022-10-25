@@ -31,4 +31,8 @@ export class CommentService {
   post(formComment:any){
     return this.http.post(`${this.API}/comments`, formComment, this.headers )
   }
+  //put(comment:any){
+  //  console.log(comment)
+  //  return this.http.put(`${this.API}/comments`, comment, this.headers)
+  //}
 }
