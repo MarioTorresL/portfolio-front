@@ -3,24 +3,24 @@ import {AuthService} from 'src/app/services/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class SidebarComponent implements OnInit {
 
-  public email: any;
-  public token: any;
+  public email: string = ''
+  public token: string = ''
 
-  constructor(private authService: AuthService ) { }
+  constructor( private authService: AuthService ) { }
 
   ngOnInit(): void {
     this.login()
   }
 
   login(){
-    this.token = this.authService.token
-    this.email = this.authService.email
+    this.token = this.authService.token as string
+    this.email = this.authService.email as string
   }
 
   logout(){
