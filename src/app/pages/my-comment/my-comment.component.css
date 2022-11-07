@@ -1,13 +1,23 @@
 
 .row{
   height:80%;
+	background-image:url('../../../assets/back.jpg');
   /* justify-content:space-around; */
 }
+.white{
+  color:white
+}
 
-.all-comments{
+.comments{
+  color:#2f4f5a;
+  background-color:#ECE9E4;
 }
 
 .new-comment{
+  /* color:white; */
+  /* background-color:#B56F3B; */
+  color:#ECE9E4;
+  background-color:#112530;
 }
 /* media smartphones */
 
