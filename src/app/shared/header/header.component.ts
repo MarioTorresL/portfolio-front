@@ -11,18 +11,16 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent implements OnInit {
 
-  public email: any;
-  public token: any;
+  public user!: User  
 
-  constructor(private authService: AuthService ) { }
+  constructor(private authService: AuthService, private router:Router ) { }
 
   ngOnInit(): void {
     this.login()
   }
 
   login(){
-    this.token = this.authService.token
-    this.email = this.authService.email
+    this.user = this.authService.user
   }
 
   logout(){
@@ -37,8 +35,6 @@ export class HeaderComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.authService.logout();
-        this.email = ''
-        this.token = ''
         Swal.fire({
           icon: 'success',
           confirmButtonColor: '#112530',

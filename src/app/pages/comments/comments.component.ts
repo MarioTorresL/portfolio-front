@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 import {AuthService} from 'src/app/services/auth.service';
 import {CommentService} from 'src/app/services/comment.service';
 import Swal from 'sweetalert2';
@@ -15,11 +16,7 @@ export class CommentsComponent implements OnInit {
 
   public user:any;
 
-  public commentForm = this.fb.group({
-    comment:['', [Validators.required]]
-  })
-
-  constructor( private commentsService: CommentService, public authService: AuthService, private fb: FormBuilder ) { }
+  constructor( private commentsService: CommentService, public authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.getComments()
@@ -29,24 +26,11 @@ export class CommentsComponent implements OnInit {
     this.commentsService.get().subscribe(resp=>{
       this.comments = resp.data;
     })
-    this.user = this.authService.email;
+    this.user = this.authService.user;
   }
 
-  postComment(){
-    if(this.commentForm.invalid){
-      return;
-    }
-    this.commentsService.post(this.commentForm.value).subscribe(resp=>{
-      this.getComments()
-      Swal.fire({
-        icon: 'success',
-        title: 'Your comment has been saved',
-        showConfirmButton: false,
-        timer: 1500
-      })
-      console.log('resp', resp)
-    })
+  add(){
+    this.router.navigateByUrl('/my-comment')
   }
-
 
 }

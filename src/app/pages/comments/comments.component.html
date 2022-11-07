@@ -1,30 +1,29 @@
 <div class="fluid">
+  <div class="up animate__animated animate__fadeIn">
+    <div class="card cardUp">
+      <button class="btn btn-warning" type="button" (click)="add()">
+        <i class="bi bi-plus-circle-fill"></i> Add commentary
+      </button>
+    </div>
+  </div>
 
-	<div class="up animate__animated animate__fadeIn" *ngIf="user">
-		<div class="card cardUp">
-			<div class=" card-header text-center">
-				<h5 class="m-3">Comment  Here</h5>
-			</div>
-			<form class="text-center" (ngSubmit)="postComment()" [formGroup]="commentForm">
-			<div class="card-body ">
-				<textarea class="form-control" formControlName="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
-			<button type="submit" class="btn btn-warning mt-2">Submit</button>
-			</div>
-			</form>
-		</div>
-	</div>
-
-	<div class="dflex">
-		<div *ngFor="let data of comments" class="card comment m-4 animate__animated animate__fadeInTopLeft">
-			<div class="title card-header" style="display:flex; align-items:center;">
-				<h4 style="flex-grow:4;"> {{data.User?.userName}} </h4>
-				<h6 style="flex-grow:1;" class="text-muted text-end">{{data.User?.email}}</h6>
-			</div>
-			<div class="card-body">
-				<p class="card-text textdata">{{data.comment}}</p>
-				<h6 class="text-end text-muted">{{data.createdAt | date: 'M/d/yy | h:mm a'}}</h6>
-			</div>
-		</div>
-	</div>
-
+  <div class="dflex">
+    <div
+      *ngFor="let data of comments"
+      class="card comment m-4 animate__animated animate__fadeInTopLeft"
+    >
+      <div class="title card-header" style="display: flex; align-items: center">
+        <h4 style="flex-grow: 4">{{ data.User?.userName }}</h4>
+        <h6 style="flex-grow: 1" class="text-muted text-end">
+          {{ data.User?.email }}
+        </h6>
+      </div>
+      <div class="card-body">
+        <p class="card-text textdata">{{ data.comment }}</p>
+        <h6 class="text-end text-muted">
+          {{ data.createdAt | date: "M/d/yy | h:mm a" }}
+        </h6>
+      </div>
+    </div>
+  </div>
 </div>

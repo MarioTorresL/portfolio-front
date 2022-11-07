@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {CommentsComponent} from './comments/comments.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MyCommentComponent } from './my-comment/my-comment.component';
 
 
 
@@ -13,7 +14,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [
     PagesComponent,
     HomeComponent,
-    CommentsComponent
+    CommentsComponent,
+    MyCommentComponent
   ],
   exports: [
     PagesComponent

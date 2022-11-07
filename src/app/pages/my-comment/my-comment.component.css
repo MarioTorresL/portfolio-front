@@ -1,0 +1,16 @@
+
+.row{
+  height:80%;
+  /* justify-content:space-around; */
+}
+
+.all-comments{
+}
+
+.new-comment{
+}
+/* media smartphones */
+
+@media (max-width: 600px) {
+}
+
