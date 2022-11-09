@@ -1,6 +1,6 @@
 
-.row{
-  height:80%;
+.profile{
+  height:100%;
 	background-image:url('../../../assets/back.jpg');
   /* justify-content:space-around; */
 }
@@ -8,9 +8,16 @@
   color:white
 }
 
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+}
+
 .comments{
   color:#2f4f5a;
   background-color:#ECE9E4;
+  flex-basis: 45%;
 }
 
 .new-comment{

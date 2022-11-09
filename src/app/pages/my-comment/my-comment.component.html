@@ -1,63 +1,54 @@
-<div class="row">
-  <div class="all-comments col-7">
-    <div class="p-3 text-center">
-      <h3 class="white">Your comments</h3>
-    </div>
-    <div class="d-flex">
-      <div class="card m-3 comments">
-        <div class="card-body">
-          <p class="card-text">
-            This isakjsldhasjdkhaskjldaskjdasjk some text in card of new comment
-          </p>
-          <hr />
-          <div class="buttons text-end">
-            <button class="btn btn-outline-success m-1">
-              <i class="bi bi-pencil-fill"></i>
-            </button>
-            <button class="btn btn-outline-danger m-1">
-              <i class="bi bi-trash3-fill"></i>
-            </button>
-          </div>
-        </div>
+<div class="profile">
+  <div class="row container-fluid">
+    <div class="all-comments col-7" *ngIf="comments">
+      <div class="p-3 text-center">
+        <h3 class="white">Your comments</h3>
       </div>
-      <div class="card m-3 comments">
-        <div class="card-body">
-          <p class="card-text">
-            This isakjsldhasjdkhaskjldaskjdasjk some text in card of new comment
-          </p>
-          <hr />
-          <div class="buttons text-end">
-            <button class="btn btn-outline-success m-1">
-              <i class="bi bi-pencil-fill"></i>
-            </button>
-            <button class="btn btn-outline-danger m-1">
-              <i class="bi bi-trash3-fill"></i>
-            </button>
+      <div class="d-flex">
+        <div *ngFor="let data of comments" class="card m-3 comments">
+          <div class="card-body">
+            <h6 class="text-start text-muted mb-1">
+              {{ data.createdAt | date: "M/d/yy | h:mm a" }}
+            </h6>
+            <input #updateComment class="form-control" placeholder="{{data.comment}}">
+            <hr />
+            <div class="buttons text-end">
+              <button class="btn btn-outline-success m-1" (click)="update(data.id, updateComment.value)">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button
+                class="btn btn-outline-danger m-1"
+                (click)="delete(data.id)"
+              >
+                <i class="bi bi-trash3-fill"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <div class="col-5">
-    <div class="p-3 text-center">
-      <h3 class="white">New comment</h3>
-    </div>
+    <div class="col-5">
+      <div class="p-3 text-center">
+        <h3 class="white">New comment</h3>
+      </div>
       <div class="card new-comment m-3">
         <div class="card-body">
           <div class="">
             <label for="exampleFormControlTextarea1" class="form-label">
               Post your comment here!
             </label>
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-            ></textarea>
+            <textarea class="form-control" #newComment rows="3"></textarea>
           </div>
         </div>
-        <button type="button" class="btn btn-warning mb-2 ms-2 me-2">Post</button>
+        <button
+          type="button"
+          (click)="new(newComment.value)"
+          class="btn btn-warning mb-2 ms-2 me-2"
+        >
+          Post
+        </button>
       </div>
+    </div>
   </div>
 </div>
