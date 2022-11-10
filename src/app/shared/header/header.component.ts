@@ -16,11 +16,9 @@ export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService, private router:Router ) { }
 
   ngOnInit(): void {
-    this.login()
-  }
-
-  login(){
-    this.user = this.authService.user
+    this.authService.validateToken().subscribe(resp=>{
+      this.user= this.authService.user
+    })
   }
 
   logout(){
