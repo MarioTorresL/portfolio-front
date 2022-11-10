@@ -73,12 +73,10 @@ export class RegisterComponent implements OnInit {
     if(this.registerForm.invalid){
       return;
     }
-    console.log('form',this.registerForm.value)
     this.userService.post(this.registerForm.value).subscribe(resp=>{
       this.router.navigateByUrl('/')
       Swal.fire({
-        title:'success',
-        text: "User Created",
+        title:'User Created!',
         icon: 'success'
       })
     }, err=>{
