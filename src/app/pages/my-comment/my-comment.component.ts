@@ -11,7 +11,7 @@ import {AuthService} from 'src/app/services/auth.service';
 })
 export class MyCommentComponent implements OnInit {
 
-  public comments!:any
+  public comments:any = ''
   public uid: number = 0
   public edit:boolean = false
 

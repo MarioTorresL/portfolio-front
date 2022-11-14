@@ -1,19 +1,24 @@
 <div class="profile">
   <div class="row container-fluid">
-    <div class="all-comments col-7" *ngIf="comments">
-      <div class="p-3 text-center">
-        <h3 class="white">Your comments</h3>
-      </div>
+
+    <div class="col-l-7 col-sm-12" *ngIf="comments">
       <div class="d-flex">
-        <div *ngFor="let data of comments" class="card m-3 comments">
+        <div *ngFor="let data of comments" class="card all-comments m-3 comments">
           <div class="card-body">
             <h6 class="text-start text-muted mb-1">
               {{ data.createdAt | date: "M/d/yy | h:mm a" }}
             </h6>
-            <input #updateComment class="form-control" placeholder="{{data.comment}}">
+            <input
+              #updateComment
+              class="form-control"
+              placeholder="{{ data.comment }}"
+            />
             <hr />
             <div class="buttons text-end">
-              <button class="btn btn-outline-success m-1" (click)="update(data.id, updateComment.value)">
+              <button
+                class="btn btn-outline-success m-1"
+                (click)="update(data.id, updateComment.value)"
+              >
                 <i class="bi bi-pencil-fill"></i>
               </button>
               <button
@@ -28,11 +33,11 @@
       </div>
     </div>
 
-    <div class="col-5">
-      <div class="p-3 text-center">
-        <h3 class="white">New comment</h3>
-      </div>
+    <div class="col-l-5 col-sm-12">
       <div class="card new-comment m-3">
+        <div class="p-3 text-center">
+          <h3 class="white">New comment</h3>
+        </div>
         <div class="card-body">
           <div class="">
             <label for="exampleFormControlTextarea1" class="form-label">

@@ -1,6 +1,6 @@
-
 .profile{
   height:100%;
+  width:100%;
 	background-image:url('../../../assets/back.jpg');
   /* justify-content:space-around; */
 }
@@ -29,5 +29,10 @@
 /* media smartphones */
 
 @media (max-width: 600px) {
+
+  .all-comments{
+   flex-grow: 4;
+  }
+
 }
 
