@@ -26,11 +26,6 @@ export const  technologies: Technologies[] = [
     stars:4
   },
   {
-    image:'nvim.jpg',
-    name:'Nvim',
-    stars:4
-  },
-  {
     image:'git.png',
     name:'Git',
     stars:4
@@ -41,14 +36,19 @@ export const  technologies: Technologies[] = [
     stars:4
   },
   {
+    image:'react.png',
+    name:'React',
+    stars:2
+  },
+  {
     image:'node.jpg',
     name:'Node Express',
     stars:4
   },
   {
-    image:'react.png',
-    name:'React',
-    stars:2
+    image:'nvim.jpg',
+    name:'Nvim',
+    stars:4
   },
   {
     image:'linux.jpg',
@@ -66,19 +66,19 @@ export const  technologies: Technologies[] = [
     stars:4
   },
   {
-    image:'mongo.png',
-    name:'MongoDB',
-    stars:3
-  },
-  {
     image:'sequelize.png',
     name:'Sequelize',
     stars:4
   },
   {
+    image:'mongo.png',
+    name:'MongoDB',
+    stars:2
+  },
+  {
     image:'mongoose.png',
     name:'Mongoose',
-    stars:4
+    stars:2
   },
 
 ]
